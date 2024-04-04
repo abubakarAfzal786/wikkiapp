@@ -1,0 +1,12 @@
+version: '3'
+services:
+  wikiapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8989:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      - COMPOSER_ALLOW_SUPERUSER=1
